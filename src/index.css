@@ -1,2 +1,18 @@
 
-
+.card {
+  text-align: center;
+  border: rgb(2, 2, 2) solid 2px;
+  padding: 1rem;
+  width: 10rem;
+  height: 20rem;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px #000000;
+  background-color: rgb(48, 83, 177);
+}
+.cardImage {
+  border: black solid 2px;
+  justify-self: center;
+  height:200px;
+  width: auto;
+}

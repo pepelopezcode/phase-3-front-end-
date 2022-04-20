@@ -1,12 +1,12 @@
 import React from 'react';
-import MovieCard from './MovieCard';
+import MovieCard from './MovieCards';
 
 function Body(){
 
     
 
     return (<>
-    <MovieCard />
+    <MovieCards />
     </>)
 }
 

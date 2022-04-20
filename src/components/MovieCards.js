@@ -1,7 +1,7 @@
 import React from 'react';
 import will from '../images/will_smith.jpg'
 
-function MovieCard(){
+function MovieCards({handleClick}){
 
     const movieInfo = [{
         "id": 1,
@@ -22,12 +22,19 @@ function MovieCard(){
         "id": 4,
         "title": "Focus",
         "averageRating": 2
+    },
+    {
+        "id": 5,
+        "title": "new",
+        "averageRating": 27
     }]
+
+    
 
 
     return (<>
         {movieInfo.map(movie => {
-            return ( <div key={movie.id} className='card' >
+            return ( <div key={movie.id} className='card' onClick={() => handleClick() }>
             <h3>{movie.title}</h3>
             <img src={will} alt='img' className='cardImage'/>
             <h5>Average Rating: {movie.averageRating}/5</h5>
@@ -36,4 +43,4 @@ function MovieCard(){
     </>)
 }
 
-export default MovieCard;
+export default MovieCards;

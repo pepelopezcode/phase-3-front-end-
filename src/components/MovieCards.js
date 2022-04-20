@@ -10,7 +10,7 @@ function MovieCards({handleClick, movieInfo}){
 
     return (<>
         {movieInfo.map(movie => {
-            return ( <div key={movie.id} className='card' onClick={() => handleClick() }>
+            return ( <div key={movie.id} className='card' onClick={() => handleClick(movie.id) }>
             <h3>{movie.name}</h3>
             <img src={will} alt='img' className='cardImage'/>
             <h5>Average Rating: {movie.avg_rating}/10</h5>

@@ -7,10 +7,11 @@ import MovieCards from './MovieCards';
 function Home() {
   const [currentPage, setCurrentPage] = useState(false)
   const [movieInfo, setMovieInfo] = useState([])
+  const [chosenMovieId, setChosenMovieId] = useState(0)
 
-  function handleClick(){
+  function handleClick(id){
     setCurrentPage(!currentPage)
-    console.log(1)
+    setChosenMovieId(id)
   }
 
   useEffect(() => {
@@ -19,10 +20,12 @@ function Home() {
       .then(data => setMovieInfo(data))
   },[])
 
+  const chosenMovie = ((movieInfo.filter(movie => chosenMovieId === movie.id))[0])
+
 
   return (
   <div><Title />
-  {currentPage ? <Movie handleClick={handleClick} /> : <MovieCards movieInfo={movieInfo} handleClick={handleClick} />}
+  {currentPage ? <Movie chosenMovie={chosenMovie} handleClick={handleClick} /> : <MovieCards movieInfo={movieInfo} handleClick={handleClick} />}
   </div>
     
     

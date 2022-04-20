@@ -1,6 +1,7 @@
 import React from "react";
 
 
+
 function ReviewForm(){
     return(
     <div>
@@ -21,7 +22,7 @@ function ReviewForm(){
             <option value="5">5</option>
         </select>
         </label>
-        <input type="submit" />
+        <input type="submit" className="submitButton"/>
         </form>
     </div>)
 }

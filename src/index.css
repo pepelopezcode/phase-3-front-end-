@@ -17,6 +17,50 @@
   width: auto;
 }
 
+.backButton {
+  background-color: white;
+  color: black;
+  border: 2px solid #6976d9;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+}
+.backButton:hover {
+  background-color: #6976d9;
+  color: white;
+}
+
+.movieDescription {
+  background: white;
+  border: 1px solid #dedede;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 30px 50px;
+}
+
+.reviews {
+  background: white;
+  border: 1px solid #dedede;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 30px 50px;
+}
+.movieReviewsTitle {
+  border-bottom: 2px solid rgb(15, 4, 4);
+  color: #3d3d3d;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 10px;
+  text-align: center;
+}
+
 form {
   background: white;
   border: 1px solid #dedede;
@@ -29,7 +73,7 @@ form {
 }
 
 input {
-  border: 1px solid #d9d9d9;
+  border: 1px solid #c7c7c7;
   border-radius: 4px;
   box-sizing: border-box;
   padding: 10px;
@@ -52,3 +96,5 @@ label {
   font-size: 14px;
   margin: 20px 0px;
 }
+
+

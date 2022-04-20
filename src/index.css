@@ -2,13 +2,20 @@
 .card {
   text-align: center;
   border: rgb(2, 2, 2) solid 2px;
+  border-radius: 5px;
   padding: 1rem;
   width: 10rem;
   height: 20rem;
   display: inline-grid;
   margin: 1rem 2rem;
   box-shadow: 3px 4px #000000;
-  background-color: rgb(48, 83, 177);
+  background-color: #6976d9;
+  transition: transform .2s;
+}
+
+.card:hover {
+  transform: scale(1.08);
+  cursor: pointer;
 }
 .cardImage {
   border: black solid 2px;
@@ -27,6 +34,7 @@
 .backButton:hover {
   background-color: #6976d9;
   color: white;
+  cursor: pointer;
 }
 
 .movieDescription {
@@ -95,6 +103,14 @@ label {
   font-family: sans-serif;
   font-size: 14px;
   margin: 20px 0px;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #ffffff;
+  color: #6976d9;
+  cursor: pointer;
+  border-color: #6976d9;
 }
 
 

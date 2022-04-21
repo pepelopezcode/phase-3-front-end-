@@ -84,7 +84,7 @@ function Movie({handleClick, chosenMovie, setReviews, reviews}){
         <img src={require(`../images/${chosenMovie.image }`)} className="reviewImage" alt={chosenMovie.name} />
         <div className="reviews" ><h2 className="movieReviewsTitle" >Reviews</h2>{reviews.map(review => {
             if (review.user_id === userId){
-                console.log(review)
+                
                 return (<div key={review.id} >
                     <h3>{review.comment}</h3>
                     <h2>Rating: {review.rating}/10</h2>

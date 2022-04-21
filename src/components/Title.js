@@ -2,7 +2,7 @@ import React from 'react';
 
 function Title(){
     return (
-        <div className='titalCard'>will smith</div>
+        <div className='titalCard'>Will's Best Films</div>
     )
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 function Title(){
     return (
-        <div>Work in Progress</div>
+        <div className='titalCard'>will smith</div>
     )
 }
 

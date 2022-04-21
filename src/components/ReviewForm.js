@@ -2,24 +2,33 @@ import React from "react";
 
 
 
-function ReviewForm(){
+function ReviewForm({setCommentValue, setRatingValue, handleSubmit}){
+
+
+
+
     return(
     <div>
-        <form  >
+        <form onSubmit={(e) => handleSubmit(e)} >
         <label>Comment:
         <input
             type="text" 
             placeholder="Comment here"
-            onChange={(e) => console.log(e.target.value)}
+            onChange={(e) =>setCommentValue(e.target.value)}
         />
         </label>
         <label>Rating:
-        <select>
+        <select  onChange={(e)=> setRatingValue(e.target.value) } >
+            <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
         </select>
         </label>
         <input type="submit" className="submitButton"/>

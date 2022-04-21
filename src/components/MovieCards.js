@@ -4,7 +4,6 @@ import React from 'react';
 function MovieCards({handleClick, movieInfo}){
 
 
-    console.log(movieInfo)
 
 
     return (<>

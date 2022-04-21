@@ -8,6 +8,8 @@ function Home() {
   const [currentPage, setCurrentPage] = useState(false)
   const [movieInfo, setMovieInfo] = useState([])
   const [chosenMovieId, setChosenMovieId] = useState(0)
+  const [reviews, setReviews] = useState([])
+  
 
   function handleClick(id){
     setCurrentPage(!currentPage)
@@ -18,14 +20,15 @@ function Home() {
     fetch('http://localhost:9292/movies')
       .then(resp => resp.json())
       .then(data => setMovieInfo(data))
-  },[])
+    
+  },[reviews])
 
   const chosenMovie = ((movieInfo.filter(movie => chosenMovieId === movie.id))[0])
 
 
   return (
   <div><Title />
-  {currentPage ? <Movie chosenMovie={chosenMovie} handleClick={handleClick} /> : <MovieCards movieInfo={movieInfo} handleClick={handleClick} />}
+  {currentPage ? <Movie chosenMovie={chosenMovie} handleClick={handleClick} reviews={reviews} setReviews={setReviews} /> : <MovieCards movieInfo={movieInfo} handleClick={handleClick} />}
   </div>
     
     

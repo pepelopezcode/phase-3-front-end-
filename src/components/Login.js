@@ -16,12 +16,7 @@ function Login({handleClick}){
     },
     body: JSON.stringify({'name': userName})
     })
-    
-    
-
-    
-
-  }
+    }
 
   
 

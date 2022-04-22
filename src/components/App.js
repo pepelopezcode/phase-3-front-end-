@@ -10,11 +10,7 @@ function App() {
   const [hideLogin, setHideLogin] = useState(false)
   let history = useHistory()
 
-  function handleClick(e){
-    e.preventDefault()
-    
-    setHideLogin(!hideLogin)
-  }
+  
 
   hideLogin ? history.push('/home') : history.push('/login')
 

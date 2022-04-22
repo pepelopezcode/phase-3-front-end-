@@ -21,7 +21,7 @@ function Login({handleClick}){
   
 
   return (
-      <div>
+      <div className="loginForm">
         <form onSubmit={e =>{
           e.preventDefault();
           postUser()
@@ -34,10 +34,10 @@ function Login({handleClick}){
             />
           </label>
           <label>
-            <input type="submit" />
+            <input type="submit" className="loginButton" />
           </label>
             </form>
-            <link to="/home" />
+            
         </div>
     )
 }

@@ -88,8 +88,8 @@ function Movie({handleClick, chosenMovie, setReviews, reviews}){
                 return (<div key={review.id} >
                     <h3>{review.comment}</h3>
                     <h2>Rating: {review.rating}/10</h2>
-                    <button onClick={() => deleteReview(review)} >delete</button>
-                    <button onClick={() => patchReview(review)} >update</button>
+                    <button onClick={() => deleteReview(review)} className="deleteButton">delete</button>
+                    <button onClick={() => patchReview(review)} className="updateButton">update</button>
                     </div>)
             }else{
                 return (<div key={review.id} >

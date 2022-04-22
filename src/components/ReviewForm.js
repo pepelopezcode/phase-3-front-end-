@@ -8,7 +8,7 @@ function ReviewForm({setCommentValue, setRatingValue, handleSubmit}){
 
 
     return(
-    <div>
+    <div className="reviewForm">
         <form onSubmit={(e) => handleSubmit(e)} >
         <label>Comment:
         <input

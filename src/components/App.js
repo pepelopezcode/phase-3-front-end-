@@ -9,7 +9,7 @@ function App() {
 
   const [hideLogin, setHideLogin] = useState(false)
   let history = useHistory()
-
+  const [currentUser, setCurrentUser] = useState(null)
   
 
   hideLogin ? history.push('/home') : history.push('/login')
@@ -17,10 +17,10 @@ function App() {
     return (<>
       
       <Route exact path="/login">
-        <Login handleClick={setHideLogin} />
+        <Login handleClick={setHideLogin} setCurrentUser={setCurrentUser} />
       </Route>
       <Route path="/home">
-        <Home />
+        <Home currentUser={currentUser} />
       </Route>
       
       

@@ -1,14 +1,13 @@
 import React, {useState, useEffect} from "react";
 import ReviewForm from "./ReviewForm";
 
-function Movie({handleClick, chosenMovie, setReviews, reviews}){
+function Movie({handleClick, chosenMovie, setReviews, reviews, currentUser}){
 
     const [commentValue, setCommentValue] = useState("")
     const [ratingValue, setRatingValue] = useState("")
     const [users, setUsers] = useState(null)
-    const [userId, setUserId] = useState(0)
     
-
+    
 
     useEffect(() => {
         fetch('http://localhost:9292/users')
@@ -31,7 +30,7 @@ function Movie({handleClick, chosenMovie, setReviews, reviews}){
         'rating': ratingValue,
         'comment': commentValue,
         'movie_id': chosenMovie.id,
-        'user_id': userId
+        'user_id': currentUser.id
         })
     })
         .then(resp => resp.json())
@@ -41,11 +40,7 @@ function Movie({handleClick, chosenMovie, setReviews, reviews}){
     }
 
 
-    useEffect(() => {
-        
-        users === null ? console.log(users) : setUserId(users[users.length - 1].id)
-
-    },[users])
+    
 
     function deleteReview(review){
 
@@ -83,7 +78,7 @@ function Movie({handleClick, chosenMovie, setReviews, reviews}){
         <><h1 className="movieReviewsTitle">{chosenMovie.name}</h1></>
         <img src={require(`../images/${chosenMovie.image }`)} className="reviewImage" alt={chosenMovie.name} />
         <div className="reviews" ><h2 className="movieReviewsTitle" >Reviews</h2>{reviews.map(review => {
-            if (review.user_id === userId){
+            if (review.user_id === currentUser.id){
                 
                 return (<div key={review.id} >
                     <h3>{review.comment}</h3>

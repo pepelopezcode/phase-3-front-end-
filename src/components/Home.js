@@ -4,7 +4,7 @@ import Movie from './Movie';
 import Title from './Title';
 import MovieCards from './MovieCards';
 
-function Home() {
+function Home({currentUser}) {
   const [currentPage, setCurrentPage] = useState(false)
   const [movieInfo, setMovieInfo] = useState([])
   const [chosenMovieId, setChosenMovieId] = useState(0)
@@ -28,7 +28,7 @@ function Home() {
 
   return (
   <div><Title />
-  {currentPage ? <Movie chosenMovie={chosenMovie} handleClick={handleClick} reviews={reviews} setReviews={setReviews} /> : <MovieCards movieInfo={movieInfo} handleClick={handleClick} />}
+  {currentPage ? <Movie chosenMovie={chosenMovie} handleClick={handleClick} reviews={reviews} setReviews={setReviews} currentUser={currentUser} /> : <MovieCards movieInfo={movieInfo} handleClick={handleClick} />}
   </div>
     
     
